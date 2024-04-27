@@ -69,7 +69,7 @@ header {
 }
 
 .logo {
-    height: 25%;
+    height: 20%;
 }
 
 header nav {
@@ -91,6 +91,68 @@ header li:hover {
 header nav .li-hebergements:hover, .li-activites:hover {
     border-top: solid;
     border-width: 2.5px;
+}
+
+/****** Formulaire de recherche ***********/
+.titre-formulaire-de-recherche h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.titre-formulaire-de-recherche p {
+    font-size: 16px;
+}
+
+.titre-formulaire-de-recherche h1, p {
+    line-height: 0.75em;
+}
+
+form {
+   display: flex;;
+   padding: 30px 0px 30px 0px;
+}
+
+label {
+    background-color: var(--main-bg-color);
+    width: 25px;
+    border-radius: 15px 0px 0px 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-location-dot {
+    color: black;
+    font-size: 20px; 
+}
+
+input {
+    padding: 15px;
+    border-color: var(--main-bg-color);
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;  
+}
+
+input[value="Rechercher"] {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    border-radius: 0px 15px 15px 0px;
+    padding: 15px 16px 15px 16px;
+    cursor: pointer;
 }
 
 /****** Hebergements And Populaires ***********/
