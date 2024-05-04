@@ -60,6 +60,11 @@ a {
     color: var(--main-bg-color)
 }
 
+h1, h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
 /****** Header ***********/
 header {
     height: 6em;
@@ -95,8 +100,6 @@ header nav .li-hebergements:hover, .li-activites:hover {
 
 /****** Formulaire de recherche ***********/
 .formulaire-de-recherche h1 {
-    font-size: 22px;
-    font-weight: 700;
     margin-top: 30px;
 }
 
@@ -142,7 +145,7 @@ textarea:focus, input:focus {
 ::placeholder {
     color: black;
     font-size: 18px;
-    font-weight: 700;  
+    font-weight: 700;
 }
 
 input[value="Rechercher"] {
@@ -318,8 +321,35 @@ input[value="Rechercher"] {
     margin-bottom: 5px;
 }
 
+/****** Activités ***********/
+.activites {
+    padding: 50px 30px 50px 30px;
+}
 
+.activites-cards a{
+    width: 23%;
+}
 
+.activites-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.activites-cards .card {    
+    padding: 0; 
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activites-cards .card-content {
+    padding: 0px 0px 2px 20px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
