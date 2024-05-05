@@ -351,6 +351,32 @@ input[value="Rechercher"] {
     padding: 0px 0px 2px 20px;
 }
 
+/****** Footer ***********/
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    padding: 5px;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 250px;
+    padding: 0;
+    margin-left: 20px;
+}
+
+footer li {
+    padding: 6px 0px 6px 0px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
