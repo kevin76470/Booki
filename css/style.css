@@ -67,26 +67,28 @@ h1, h2 {
 
 /****** Header ***********/
 header {
-    height: 6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
 }
 
 .logo {
-    height: 20%;
+    width: 60px;
 }
 
 header nav {
-    height: 6em;
     display: flex;
-    gap: 60px;
+    justify-content: space-between;
+    height: 100%;
+    width: 250px;
 }
 
 header nav li {
     list-style: none;
     font-size: 16px;
-    padding-top: 20px;
+    height: 100%;
+    padding-top: 15px;
 }
 
 header li:hover {
@@ -100,7 +102,7 @@ header nav .li-hebergements:hover, .li-activites:hover {
 
 /****** Formulaire de recherche ***********/
 .formulaire-de-recherche h1 {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .formulaire-de-recherche p {
@@ -108,11 +110,11 @@ header nav .li-hebergements:hover, .li-activites:hover {
 }
 
 .formulaire-de-recherche h1, p {
-    line-height: 0.75em;
+    line-height: 12px;
 }
 
 form {
-   display: flex;;
+   display: flex;
    margin: 30px 0px 30px 0px;
 }
 
@@ -148,7 +150,7 @@ textarea:focus, input:focus {
     font-weight: 700;
 }
 
-input[value="Rechercher"] {
+input[value="Rechercher"], button[value="Rechercher"] {
     font-size: 18px;
     font-weight: 700;
     color: white;
@@ -157,6 +159,13 @@ input[value="Rechercher"] {
     border-radius: 0px 15px 15px 0px;
     padding: 15px 16px 15px 16px;
     cursor: pointer;
+}
+
+button[value="Rechercher"] {
+    display: none;
+    font-size: 17px;
+    border-radius: 15px;
+    border: 0;
 }
 
 /****** Filtres ***********/
@@ -196,7 +205,6 @@ input[value="Rechercher"] {
 .info {
     display: flex;
     align-items: center;
-    text-align: center;
     margin: 20px 0px 20px 0px;
 }
 
@@ -234,25 +242,26 @@ input[value="Rechercher"] {
 }
 
 .hebergements-cards a {
-    width: 30%;
+    width: 28%;
 }
 
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 33px;
+    justify-content: space-evenly;
     margin-top: 33px;
+    gap: 40px;
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .hebergements-cards .card-content {
     flex-direction: column;
-    padding: 0px 0px 7px 10px;
+    margin-left: 10px;
 }
 
 .hebergements-cards img {
@@ -273,7 +282,8 @@ input[value="Rechercher"] {
 .hebergements .plus {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 0;
 }
 
 /****** Populaires ***********/
@@ -337,7 +347,8 @@ input[value="Rechercher"] {
 }
 
 .activites-cards .card {    
-    padding: 0; 
+    padding: 0;
+    height: 100%;
 }
 
 .activites-cards img {
@@ -353,7 +364,6 @@ input[value="Rechercher"] {
 
 /****** Footer ***********/
 footer {
-    display: flex;
     background-color: var(--main-bg-color);
     padding: 5px;
     margin-top: 20px;
@@ -368,9 +378,12 @@ h4 {
 footer ul {
     list-style: none;
     display: flex;
-    gap: 250px;
     padding: 0;
     margin-left: 20px;
+}
+
+footer ul .a-propos, .nos-hebergements, .assistance {
+    width: 100%;
 }
 
 footer li {
@@ -388,6 +401,14 @@ footer li {
 
     .hebergements {
         width: 100%;
+    }
+
+    .hebergements-cards .card-title {
+        font-size: 14px;
+    }
+
+    .hebergements-cards .card-subtitle {
+        font-size: 13px;
     }
 
     .populaires {
@@ -412,9 +433,79 @@ footer li {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-cards img {
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .main-container {
+        padding: 0px;
+    }
+
+    /****** Header ***********/
+    header {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .logo {
+        padding: 30px;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header nav a {
+        width: 50%;
+    }
+
+    header nav li {
+        padding-top: 0;
+        text-align: center;        
+        border-bottom: solid;
+        border-color: var(--main-bg-color);
+        padding-bottom: 5px;
+    }
+
+    header nav .li-hebergements:hover, .li-activites:hover {
+        border-top: none;
+        border-color: var(--main-color); 
+    }
+    
+    /****** Formulaire de recherche ***********/
+    .formulaire-et-filtres {
+        padding: 20px;
+    }
+
+    .formulaire-de-recherche h1 {
+        line-height: 25px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    input[value="Rechercher"] {
+        display: none;
+    }
+
+    button[value="Rechercher"] {
+        display: block;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3)
+    }
+
+    /****** Filtres ***********/
+    .filtres {
+        flex-wrap: wrap;
+    }
+
+    .info p {
+        line-height: 20px;
+    }
+
 }
