@@ -22,13 +22,14 @@
         <header>
             <img class="logo" src="images/logo/Booki@3x.png" alt="Logo Booki">
             <nav>
-                <a href=""><li class="li-hebergements">Hébergements</li></a>
-                <a href=""><li class="li-activites">Activités</li></a>
+                <a href="#hebergements-a-marseille"><li class="li-hebergements">Hébergements</li></a>
+                <a href="#activites-a-marseille"><li class="li-activites">Activités</li></a>
             </nav>
         </header>
 
         <!-- Main -->
         <main>
+        <div class="formulaire-et-filtres">
             <!-- Formulaire de recherche -->
             <div class="formulaire-de-recherche">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -36,7 +37,8 @@
                     <form action="" method="post">
                         <label><i class="fa-solid fa-location-dot"></i></label>
                         <input type="text" name="ville" id="ville" placeholder="Marseille, France">
-                        <input type="submit" value="Rechercher"></a>
+                        <input type="submit" value="Rechercher">
+                        <button class="fa-solid fa-magnifying-glass" type="submit" value="Rechercher">
                     </form>
             </div>
 
@@ -51,11 +53,12 @@
             <div class="info">
                 <i class="fa-solid fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
+        </div>
 
             <!-- Cartes Hébergements -->
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
-                    <h2 class="section-title">Hébergements à Marseille</h2>
+                    <h2 id="hebergements-a-marseille" class="section-title">Hébergements à Marseille</h2>
                     <div class="hebergements-cards">
                         <a href="#">
                             <article class="card">
@@ -158,9 +161,10 @@
                                 </div>
                             </div>
                             </article>
-                        </a>
-                    <a href="#"><p class="plus">Afficher plus</p></a>
+                        </a>   
                     </div>
+                    <a href="#"><p class="plus">Afficher plus</p></a> 
+                    
                 </section>
                 <!-- Cartes Populaires -->
                 <section class="populaires">
@@ -232,7 +236,7 @@
 
         <!-- Activités -->
         <section class="activites">  
-            <h2>Activités à Marseille</h2>
+            <h2 id="activites-a-marseille">Activités à Marseille</h2>
                 <div class="activites-cards">
                     <a href="#">
                         <article class="card">
@@ -280,18 +284,18 @@
         <!-- Footer -->
         <footer>
             <ul>
-                <div>
+                <div class="a-propos">
                     <h4>À propos</h4>
                         <a href="#"><li>Fonctionnement du site</li></a>
                         <a href="#"><li>Conditions générales</li></a>
                         <a href="#"><li>Données et confidentialité</li></a>
                 </div>
-                <div>
+                <div class="nos-hebergements">
                     <h4>Nos hébergements</h4>
                         <a href="#"><li>Charte qualité</li></a>
                         <a href="#"><li>Proposer votre hôtel</li></a>
                 </div>
-                <div>
+                <div class="assistance">
                     <h4>Assistance</h4>
                         <a href="#"><li>Centre d'aide</li></a>
                         <a href="#"><li>Nous contacter</li></a>
