@@ -261,12 +261,14 @@ button[value="Rechercher"] {
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .hebergements-cards .card-content {
     flex-direction: column;
-    margin-left: 10px;
+    margin: 0px 0px 0px 10px;   
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .hebergements-cards img {
@@ -274,6 +276,10 @@ button[value="Rechercher"] {
     height: 114px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-title, .card-subtitle {
+    margin: 0;
 }
 
 .hebergements, .populaires .card-subtitle {
@@ -341,7 +347,7 @@ button[value="Rechercher"] {
     padding: 50px 30px 50px 30px;
 }
 
-.activites-cards a{
+.activites-cards a {
     width: 23%;
 }
 
@@ -408,14 +414,6 @@ footer li {
         width: 100%;
     }
 
-    .hebergements-cards .card-title {
-        font-size: 14px;
-    }
-
-    .hebergements-cards .card-subtitle {
-        font-size: 13px;
-    }
-
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -429,14 +427,6 @@ footer li {
 
     .populaires-cards a {
         width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
     }
 
     .activites-cards img {
@@ -506,7 +496,7 @@ footer li {
     }
 
     input {
-        width: 80%;
+        width: 82%;
     }
 
     input[value="Rechercher"] {
@@ -533,7 +523,41 @@ footer li {
         line-height: 20px;
     }
     
+    /****** Hebergements And Populaires ***********/
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
 
+    /****** Populaires ***********/
+    .populaires {
+        margin-top: 0;
+        border-radius: 0 !important;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards .card {
+        margin-top: 20px;
+    }
+
+    /****** Hebergements ***********/
+    .hebergements {
+        background-color: white !important;
+    }
+
+    .hebergements-cards a {
+        width: 100%;
+    }
+
+    .hebergements-cards {
+        margin-top: 20px;
+    }
 
     /****** Footer ***********/
     footer ul {
