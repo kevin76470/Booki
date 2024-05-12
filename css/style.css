@@ -171,13 +171,18 @@ button[value="Rechercher"] {
 /****** Filtres ***********/
 .filtres {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 18px;
 }
 
 .filtres p {
     font-size: 18px;
     font-weight: 700;
+}
+
+.filtres-list  {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
 }
 
 .filtres li {
@@ -437,6 +442,20 @@ footer li {
     .activites-cards img {
         height: 200px;
     }
+
+    .filtres {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .filtres-list {
+        margin-top: 5px;
+        font-size: 16px;
+    } 
+    
+    .filtres li {
+        font-size: 16px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -487,7 +506,7 @@ footer li {
     }
 
     input {
-        width: 100%;
+        width: 80%;
     }
 
     input[value="Rechercher"] {
@@ -500,12 +519,25 @@ footer li {
     }
 
     /****** Filtres ***********/
-    .filtres {
+    .filtres li {   
+        font-size: 14px;
+        width: 30%;
+    }
+
+    .filtres-list {
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .info p {
         line-height: 20px;
     }
+    
 
+
+    /****** Footer ***********/
+    footer ul {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
