@@ -342,7 +342,7 @@ button[value="Rechercher"] {
     margin-bottom: 5px;
 }
 
-/****** Activités ***********/
+/****** Activites ***********/
 .activites {
     padding: 50px 30px 50px 30px;
 }
@@ -360,6 +360,8 @@ button[value="Rechercher"] {
 .activites-cards .card {    
     padding: 0;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .activites-cards img {
@@ -371,6 +373,13 @@ button[value="Rechercher"] {
 
 .activites-cards .card-content {
     padding: 0px 0px 2px 20px;
+    height: 60px; 
+    display: flex;
+    align-items: center;
+}
+
+.activites .card-title {
+    margin: 0;
 }
 
 /****** Footer ***********/
@@ -557,6 +566,17 @@ footer li {
 
     .hebergements-cards {
         margin-top: 20px;
+        gap: 25px;
+    }
+
+    /****** Activites ***********/
+    .activites-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .activites a {
+        width: 100%;
     }
 
     /****** Footer ***********/
