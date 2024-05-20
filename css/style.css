@@ -40,8 +40,8 @@ a {
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    padding: 5px;
 }
 
 .card img {
@@ -84,20 +84,24 @@ header nav {
     width: 250px;
 }
 
-header nav li {
+header nav span {
     list-style: none;
     font-size: 16px;
     height: 100%;
     padding-top: 15px;
 }
 
-header li:hover {
+header span:hover {
     color: var(--main-color);
 }
 
-header nav .li-hebergements:hover, .li-activites:hover {
+header nav .span-hebergements:hover, .span-activites:hover {
     border-top: solid;
     border-width: 2.5px;
+}
+
+header nav a {
+    margin-top: 16px;
 }
 
 /****** Formulaire de recherche ***********/
@@ -120,12 +124,12 @@ form {
 
 label {
     background-color: var(--main-bg-color);
-    width: 25px;
     border-radius: 15px 0px 0px 15px;
-    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 25px;
+    padding: 15px;
 }
 
 .fa-location-dot {
@@ -134,10 +138,19 @@ label {
 }
 
 input {
-    padding: 15px;
     border-color: var(--main-bg-color);
     border-style: solid;
     border-width: 1px 0px 1px 0px;
+    border-radius: 0 15px 15px 0;
+    padding: 15px;
+}
+
+#ville {
+    width: 280px;
+}
+
+input[value="Rechercher"] {
+    margin-left: -131px;
 }
 
 textarea:focus, input:focus {
@@ -155,7 +168,6 @@ input[value="Rechercher"], button[value="Rechercher"] {
     font-weight: 700;
     color: white;
     background-color: var(--main-color);
-    border-color: var(--main-color);
     border-radius: 0px 15px 15px 0px;
     padding: 15px 16px 15px 16px;
     cursor: pointer;
@@ -179,13 +191,17 @@ button[value="Rechercher"] {
     font-weight: 700;
 }
 
-.filtres-list  {
+.filtres-list {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
+    gap: 15px;
 }
 
-.filtres li {
+.filtres .economique-familial, .filtres .romantique-pepites {
+    display: flex;
+    gap: 15px;
+}
+
+.filtres-list span {
     font-size: 17px;
     font-weight: 700;
     display: flex;
@@ -194,11 +210,12 @@ button[value="Rechercher"] {
     border-radius: 30px;
     border-color: #D9D9D9;
     border-width: 2px;
+    height: 20px;
     padding: 12px 18px 12px 18px;
     cursor: pointer;
 }
 
-.filtres li:hover {
+.filtres span:hover {
     background-color: var(--filter-bg-color);
 }
 
@@ -215,16 +232,16 @@ button[value="Rechercher"] {
 
 .info p {
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 .fa-solid.fa-info {
+    font-size: 10px;
     border: solid;
     border-color: #D9D9D9;
     border-width: 1px;
     border-radius: 50%;
     padding: 6px 9px 6px 9px;
-    font-size: 10px;
     margin-right: 10px;
 }
 
@@ -265,17 +282,17 @@ button[value="Rechercher"] {
 
 .hebergements-cards .card-content {
     flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;    
     margin: 0px 0px 0px 10px;   
     height: 80px;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .hebergements-cards img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;    
     width: 100%;
     height: 114px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-title, .card-subtitle {
@@ -314,18 +331,18 @@ button[value="Rechercher"] {
 }
 
 .populaires-cards img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;    
     width: 33%;
     height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
 }
 
 .populaires-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; 
+    padding-left: 15px;
+    width: 67%;
     box-sizing: border-box;
 }
 
@@ -358,24 +375,24 @@ button[value="Rechercher"] {
 }
 
 .activites-cards .card {    
+    display: flex;
+    flex-direction: column;    
     padding: 0;
     height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .activites-cards img {
-    width: 100%;
-    height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    width: 100%;
+    height: 380px;
 }
 
 .activites-cards .card-content {
+    display: flex;
+    align-items: center; 
     padding: 0px 0px 2px 20px;
     height: 60px; 
-    display: flex;
-    align-items: center;
 }
 
 .activites .card-title {
@@ -385,29 +402,20 @@ button[value="Rechercher"] {
 /****** Footer ***********/
 footer {
     background-color: var(--main-bg-color);
-    padding: 5px;
-    margin-top: 20px;
+    display: flex;
+    padding: 20px;
 }
 
 h4 {
     font-size: 18px;
-    margin: auto;
-    margin-bottom: 8px;
+    margin: 0;
 }
 
-footer ul {
-    list-style: none;
+footer .a-propos, .nos-hebergements, .assistance {
     display: flex;
-    padding: 0;
-    margin-left: 20px;
-}
-
-footer ul .a-propos, .nos-hebergements, .assistance {
+    flex-direction: column;
     width: 100%;
-}
-
-footer li {
-    padding: 6px 0px 6px 0px;
+    gap: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -482,15 +490,15 @@ footer li {
         width: 50%;
     }
 
-    header nav li {
-        padding-top: 0;
-        text-align: center;        
+    header nav span {
         border-bottom: solid;
         border-color: var(--main-bg-color);
-        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 5px 0;
     }
 
-    header nav .li-hebergements:hover, .li-activites:hover {
+    header nav .span-hebergements:hover, .span-activites:hover {
         border-top: none;
         border-color: var(--main-color); 
     }
@@ -504,6 +512,10 @@ footer li {
         line-height: 25px;
     }
 
+    .formulaire-de-recherche p {
+        line-height: 20px;
+    }
+
     input {
         width: 82%;
     }
@@ -514,18 +526,18 @@ footer li {
 
     button[value="Rechercher"] {
         display: block;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3)
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+        margin-left: -48px;
     }
 
     /****** Filtres ***********/
-    .filtres li {   
+    .filtres span {   
         font-size: 14px;
-        width: 30%;
+        width: 100%;
     }
 
     .filtres-list {
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
     }
 
     .info p {
@@ -580,8 +592,9 @@ footer li {
     }
 
     /****** Footer ***********/
-    footer ul {
+    footer {
         flex-direction: column;
         gap: 50px;
+        padding: 30px;
     }
 }
